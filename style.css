@@ -503,3 +503,234 @@ background: var(--background);
 .product:hover .product-image {
     transform: scale(1.02);
 }
+/* ============================= */
+/* PRODUCT PAGE */
+/* ============================= */
+
+.product-page {
+max-width: 1100px;
+margin: 80px auto 120px;
+
+```
+padding: 0 35px;
+
+display: grid;
+grid-template-columns: 1.15fr 0.85fr;
+
+gap: 75px;
+
+align-items: center;
+```
+
+}
+
+.product-page-image {
+background: var(--card);
+
+```
+border: 1px solid var(--border);
+
+border-radius: 25px;
+
+padding: 25px;
+
+overflow: hidden;
+```
+
+}
+
+.product-page-image img {
+width: 100%;
+
+```
+display: block;
+
+border-radius: 15px;
+```
+
+}
+
+.product-page-content {
+max-width: 470px;
+}
+
+.product-page-eyebrow {
+color: var(--muted);
+
+```
+font-size: 12px;
+
+letter-spacing: 1.5px;
+
+margin-bottom: 18px;
+```
+
+}
+
+.product-page-content h1 {
+font-family: "Playfair Display", serif;
+
+```
+font-size: clamp(48px, 6vw, 68px);
+
+font-weight: 400;
+
+line-height: 1;
+
+letter-spacing: -2px;
+
+margin-bottom: 30px;
+
+text-transform: lowercase;
+```
+
+}
+
+.product-page-content h2 {
+font-family: "Playfair Display", serif;
+
+```
+font-size: 25px;
+
+font-weight: 400;
+
+line-height: 1.35;
+
+margin-bottom: 18px;
+```
+
+}
+
+.product-page-description {
+color: var(--muted);
+
+```
+font-size: 15px;
+
+line-height: 1.8;
+
+margin-bottom: 45px;
+```
+
+}
+
+/* WHAT'S INCLUDED */
+
+.included {
+border-top: 1px solid var(--border);
+
+```
+border-bottom: 1px solid var(--border);
+
+padding: 28px 0;
+
+margin-bottom: 35px;
+```
+
+}
+
+.included h3 {
+font-family: "Playfair Display", serif;
+
+```
+font-size: 22px;
+
+font-weight: 400;
+
+margin-bottom: 20px;
+```
+
+}
+
+.included ul {
+list-style: none;
+
+```
+display: grid;
+
+grid-template-columns: 1fr 1fr;
+
+gap: 13px;
+
+color: var(--muted);
+
+font-size: 14px;
+```
+
+}
+
+.included li {
+line-height: 1.5;
+}
+
+/* PURCHASE */
+
+.purchase {
+display: flex;
+
+```
+align-items: center;
+
+justify-content: space-between;
+
+gap: 20px;
+```
+
+}
+
+.product-price {
+font-family: "Playfair Display", serif;
+
+```
+font-size: 27px;
+```
+
+}
+
+.purchase-button {
+margin-top: 0;
+}
+
+/* MOBILE PRODUCT PAGE */
+
+@media (max-width: 800px) {
+
+```
+.product-page {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    margin-top: 50px;
+
+    margin-bottom: 80px;
+
+    padding: 0 20px;
+}
+
+.product-page-content {
+    max-width: none;
+}
+
+.product-page-content h1 {
+    font-size: 52px;
+}
+```
+
+}
+
+@media (max-width: 500px) {
+
+```
+.included ul {
+    grid-template-columns: 1fr;
+}
+
+.purchase {
+    align-items: flex-start;
+
+    flex-direction: column;
+}
+```
+
+}
