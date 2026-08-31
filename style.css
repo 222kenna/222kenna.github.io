@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+:root {
+    --background: #f8f6f2;
+    --card: #fffefa;
+    --text: #272522;
+    --muted: #817b73;
+    --border: #e6e0d7;
+    --accent: #d8cfc2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ============================= */
+/* NAVIGATION */
+/* ============================= */
+
+nav {
+    max-width: 1180px;
+    margin: auto;
+    padding: 28px 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 14px;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-style: italic;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+    opacity: 0.45;
+}
+
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+
+.hero {
+    position: relative;
+
+    max-width: 1000px;
+    margin: 100px auto 130px;
+
+    padding: 0 30px;
+
+    text-align: center;
+}
+
+.hero::before {
+    content: "✦";
+    position: absolute;
+
+    left: 7%;
+    top: 25px;
+
+    font-size: 18px;
+    opacity: 0.45;
+
+    animation: float 4s ease-in-out infinite;
+}
+
+.hero::after {
+    content: "˚";
+    position: absolute;
+
+    right: 9%;
+    bottom: 20px;
+
+    font-size: 45px;
+    font-family: "Playfair Display", serif;
+
+    opacity: 0.35;
+
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+
+    text-transform: lowercase;
+
+    color: var(--muted);
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 7vw, 82px);
+
+    font-weight: 400;
+
+    line-height: 1.02;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 30px;
+}
+
+.hero p {
+    max-width: 630px;
+
+    margin: auto;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+.button {
+    display: inline-block;
+
+    margin-top: 38px;
+
+    padding: 14px 29px;
+
+    border: 1px solid var(--text);
+
+    border-radius: 100px;
+
+    font-size: 13px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.button:hover {
+    background: var(--text);
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* ============================= */
+/* SECTIONS */
+/* ============================= */
+
+section {
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding: 90px 35px;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.section-title h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    font-weight: 400;
+
+    letter-spacing: -1px;
+}
+
+.section-title p {
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* ============================= */
+/* PRODUCT GRID */
+/* ============================= */
+
+.products {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 22px;
+}
+
+.product {
+    position: relative;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 25px;
+
+    padding: 38px 34px;
+
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 50px rgba(40, 35, 30, 0.07);
+}
+
+.product-icon {
+    font-size: 32px;
+
+    margin-bottom: 45px;
+}
+
+.product h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+
+    text-transform: lowercase;
+}
+
+.product p {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.price {
+    margin-top: auto;
+
+    padding-top: 30px;
+
+    font-size: 13px;
+
+    letter-spacing: 0.5px;
+
+    text-transform: lowercase;
+}
+
+.product-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    width: fit-content;
+
+    font-size: 13px;
+
+    border-bottom: 1px solid var(--text);
+
+    padding-bottom: 2px;
+
+    transition: opacity 0.2s ease;
+}
+
+.product-button:hover {
+    opacity: 0.45;
+}
+
+
+/* ============================= */
+/* ABOUT */
+/* ============================= */
+
+.about {
+    max-width: 720px;
+
+    text-align: center;
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.about h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    font-weight: 400;
+
+    margin-bottom: 25px;
+}
+
+.about p {
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer {
+    border-top: 1px solid var(--border);
+
+    margin-top: 40px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.socials {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 18px;
+}
+
+.socials a {
+    transition: opacity 0.2s ease;
+}
+
+.socials a:hover {
+    opacity: 0.45;
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 650px) {
+
+    nav {
+        padding: 22px 20px;
+    }
+
+    nav ul {
+        gap: 17px;
+
+        font-size: 12px;
+    }
+
+    .hero {
+        margin-top: 70px;
+
+        margin-bottom: 90px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero::before {
+        left: 2%;
+    }
+
+    .hero::after {
+        right: 2%;
+    }
+
+    section {
+        padding: 65px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 38px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product {
+        min-height: 350px;
+
+        padding: 30px;
+    }
+
+    .about {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .about h2 {
+        font-size: 38px;
+    }
+}
